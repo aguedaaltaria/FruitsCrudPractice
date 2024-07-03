@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API RESTful con formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="back">
+    <div class="contenedor">
+    <h1>API RESTful con formulario</h1>
+
+    <!-- GET -->
+    <div class="cuadroGET">
+        <h1>GET</h1>
+        <button id="mostrarGET">Mostrar</button>
+    </div>
+    <form id="formularioGET">
+        <h2>GET</h2>
+        <label for="nombreGET">Nombre</label>
+        <input type="text" id="nombreGET" name="nombreGET" required>
+        <button id="btnGET" type="submit">Consultar</button>
+        <br>
+    </form>
+
+        <div id="listaDeFrutas">
+
+        </div>
+
+    <!-- POST -->
+    <div class="cuadroPOST">
+        <h1>POST</h1>
+        <button id="mostrarPOST">Mostrar</button>
+    </div>
+    <form id="formularioPOST">
+        <h2>POST</h2>
+        <label for="nombrePOST">Nombre</label>
+        <input type="text" id="nombrePOST" name="nombrePOST" required>
+        <label for="colorPOST">Color</label>
+        <input type="text" id="colorPOST" name="colorPOST" required>
+        <button id="btnPOST" type="submit">Crear</button>
+        <br>
+    </form>
+
+    <!-- PUT -->
+    <div class="cuadroPUT">
+        <h1>PUT</h1>
+        <button id="mostrarPUT">Mostrar</button>
+    </div>
+    <form id="formularioPUT">
+        <h1>PUT</h1>
+        <label for="nombrePUT">Nombre</label>
+        <input type="text" id="nombrePUT" name="nombrePUT" required>
+        <label for="newnombrePUT">Nuevo Nombre</label>
+        <input type="text" id="newnombrePUT" name="newnombrePUT"required>
+        <label for="colorPUT">Color</label>
+        <input type="text" id="colorPUT" name="colorPUT" required>
+        <button id="btnPUT" type="submit">Modificar</button>
+    </form>
+
+    <!-- DELETE -->
+    <div class="cuadroDELETE">
+        <h1>DELETE</h1>
+        <button id="mostrarDELETE">Mostrar</button>
+    </div>
+    <form id="formularioDELETE">
+        <h1>DELETE</h1>
+        <label for="nombreDELETE">Nombre</label>
+        <input type="text" id="nombreDELETE" name="nombreDELETE" required>
+        <button id="btnDELETE" type="submit">Borrar</button>
+    </form>
+
+    <!-- <button onclick="gato()">probar</button> -->
+</div>
+</div>
+<script src="script.js"></script>
+<script src="Gemini2.5.js"></script>
+</body> 
+</html>

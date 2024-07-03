@@ -1,0 +1,8 @@
+PUT http://localhost:3100/frutas/manzana
+
+Content-Type: application/json
+
+{
+    "nombre": "manzana",
+    "color": "verde",
+}
