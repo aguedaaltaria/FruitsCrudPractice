@@ -22,27 +22,45 @@ formularioGET.addEventListener('submit', event => {
     .then(response => response.json())
     .then((data) => {
         if (data) {
+            alert(`Fruta existe: ${data.nombre}`)
             listaDeFrutas.style.opacity = 1;
             listaDeFrutas.innerHTML = `
+            <button id="cerrarListaDeFrutas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"  fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
             <h3>Lista de frutas</h3>
             <h4>Fruta encontrada:</h4>
             <p>Nombre: ${data.nombre}</p>
             <p>Color: ${data.color}</p>
             `;
-        } else {
-            listaDeFrutas.style.opacity = 1;
-            listaDeFrutas.innerHTML = `
-            <p>Fruta no encontrada: ${nombreGET}</p>
-            `;
-            listaDeFrutas.style.color = 'red';
+
+            const cerrarListaDeFrutas = document.getElementById("cerrarListaDeFrutas");
+
+            cerrarListaDeFrutas.addEventListener('click', () => {
+            listaDeFrutas.style.opacity = 0;
+            
+            })
         }
+        // } else {
+        //     listaDeFrutas.style.opacity = 1;
+        //     listaDeFrutas.innerHTML = `
+        //     <p>Fruta no encontrada: ${data.nombre}</p>
+        //     `;
+        //     listaDeFrutas.style.color = 'red';
+        // }
     })
     .catch(error => {
         console.error(error);
-        listaDeFrutas.innerHTML = `
-            <p>Error al consultar</p>
+        alert(`Fruta no existe: ${nombreGET}`);
+        listaDeFrutas.style.opacity = 1;
+            listaDeFrutas.innerHTML = `
+            <button id="cerrarListaDeFrutas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"  fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+            <p>Fruta no encontrada: ${nombreGET}</p>
             `;
-        listaDeFrutas.style.color = 'red';
+            listaDeFrutas.style.color = 'red';
+            const cerrarListaDeFrutas = document.getElementById("cerrarListaDeFrutas");
+            cerrarListaDeFrutas.addEventListener('click', () => {
+            listaDeFrutas.style.opacity = 0;
+            
+})
     })
 });
 

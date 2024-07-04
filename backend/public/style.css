@@ -363,3 +363,14 @@ button:active {
 button {
     cursor: pointer;
 }
+
+#cerrarListaDeFrutas {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}

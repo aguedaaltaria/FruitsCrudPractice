@@ -80,3 +80,6 @@ mostrarDELETE.addEventListener('click', function() {
         moverDELETE = true;
     }
 })
+
+
+// Lista de Frutas
